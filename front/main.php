@@ -1,14 +1,53 @@
-<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
-<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
-<div id="TabbedPanels1" class="TabbedPanels">
-  <ul class="TabbedPanelsTabGroup">
-    <li class="TabbedPanelsTab" tabindex="0">健康新知</li>
-    <li class="TabbedPanelsTab" tabindex="0">菸害防制</li>
-    <li class="TabbedPanelsTab" tabindex="0">癌症防治</li>
-    <li class="TabbedPanelsTab" tabindex="0">慢性病防治</li>
-  </ul>
-  <div class="TabbedPanelsContentGroup">
-    <div class="TabbedPanelsContent">
+
+<style>
+  .tags{
+    display:flex;
+    margin-left: 1px;
+  }
+  .tags .tag{
+    width:100px;
+    padding:0.5rem 1rem;
+    border:1px solid #ccc;
+    text-align: center;
+    margin-left:-1px;
+    background:#ddd;
+    cursor: pointer;
+    z-index: 99;
+    border-radius: 1rem 1rem 0 0 ;
+  }
+  .tags .active{
+    background:white;
+    border-bottom: 1px solid white;
+  }
+  .contents{
+    position: relative;
+    width:99%;
+  }
+  .content{
+    position:absolute;
+    border:1px solid #ccc;
+    top:-1px;
+    padding: 0.5rem;
+    background:white;
+    display:none;
+  }
+  .cactive{
+    display: block;
+  }
+</style>
+  <div class="tags">
+
+    <div id="t1" class='tag active'>健康新知</div>
+    <div id="t2" class='tag'>菸害防制</div>
+    <div id="t3" class='tag'>癌症防治</div>
+    <div id="t4" class='tag'>慢性病防治</div>
+  </div>
+  
+  
+  <!--1-->
+<div class="contents">
+  <div id="c1" class="content cactive">
+    <pre>
     缺乏運動已成為影響全球死亡率的第四大危險因子-國人無規律運動之比率高達72.2%
 資料來源： 行政院衛生署國民健康局 
 發佈日期： 2012 / 10 / 07
@@ -26,8 +65,12 @@
 6. 在家裡、辦公室附近找方便的資源運動，包括公園、職場辦的課程、活動。
 7. 減少看電視、打電玩等靜態生活的時間。
     民眾對運動如有疑問，可參考國民健康局肥胖防治網-「快樂動」(http://obesity.bhp.gov.tw)，亦可撥打免費市話健康體重管理電話諮詢服務，諮詢專線「0800-367-100（0800-瘦落去-要動動）」，也可利用國民健康局局網首頁或肥胖防治網問題諮詢專區的網路電話撥入功能，向客服人員諮詢關於運動、健康飲食及健康體重管理等相關疑問。
-    </div>
-    <div class="TabbedPanelsContent">
+
+    </pre>
+  </div>
+  <div id="c2" class="content">
+    <pre>
+
     菸害防治法規
 第二十三條　　違反第五條或第十條第一項規定者，處新臺幣一萬元以上五萬元以下罰鍰，並得按次連續處罰。
 第二十四條　　製造或輸入違反第六條第一項、第二項或第七條第一項規定之菸品者，處新臺幣一百萬元以上五百萬元以下罰鍰，並令限期回收；屆期未回收者，按次連續處罰，違規之菸品沒入並銷毀之。
@@ -48,8 +91,11 @@
 違反第十五條第二項、第十六條第二項或第三項規定者，處新臺幣一萬元以上五萬元以下罰鍰，並令限期改正；屆期未改正者，得按次連續處罰。
 第三十二條　　違反本法規定，經依第二十三條至前條規定處罰者，得併公告被處分人及其違法情形。
 第三十三條　　本法所定罰則，除第二十五條規定由中央主管機關處罰外，由直轄市、縣（市）主管機關處罰之。
-    </div>
-    <div class="TabbedPanelsContent">降低罹癌風險 建構健康生活型態
+    </pre>
+  </div>
+  <div id="c3" class="content">
+    <pre>
+    降低罹癌風險 建構健康生活型態
 癌症防治   三管齊下  Part 1 降低罹癌風險建構健康生活型態 
 
 撰文：徐文媛　諮詢對象：衛生署國民健康局副局長趙坤郁 
@@ -65,8 +111,12 @@
 
 資料來源：行政院衛生署衛生報導139期
 上稿日期：2010/1/20
-</div>
-    <div class="TabbedPanelsContent">長期憋尿 泌尿系統問題多 
+
+    </pre>
+  </div>
+  <div id="c4" class="content">
+    <pre>
+    長期憋尿 泌尿系統問題多 
 資料來源：中央健康保險局雙月刊第98期
 上稿日期：2012/08/10
 文／游小雯
@@ -87,9 +137,22 @@
 2、注意個人衛生：如多淋浴少盆浴、女生在如廁後記得由前往後擦、性行為前後（不論男女）應注意會陰部、肛門口及尿道口的清潔工作。
 3、正常的飲食習慣及充分的休息與睡眠，以增加抵抗力及免疫力。
 4、多注意及控制易引發膀胱炎的疾病：如糖尿病、尿路結石、攝護腺肥大等。
-如果民眾發現自己解尿不舒服時，一定要在第一時間就診，讓醫師採用檢體對症下藥，只要沒有其他的特殊問題併存，同時能接受完整療程的抗生素治療，通常一星期左右即可痊癒。不過服藥的時間及用量絕對要遵照醫師囑咐，如果自行隨意停藥或不按時服用，很可能會造成殘存的細菌出現抗藥性，非但原本的症狀無法痊癒，還可能帶來慢性泌尿道發炎、尿路結石、腎臟功能受損等併發症，千萬要特別注意。</div>
+如果民眾發現自己解尿不舒服時，一定要在第一時間就診，讓醫師採用檢體對症下藥，只要沒有其他的特殊問題併存，同時能接受完整療程的抗生素治療，通常一星期左右即可痊癒。不過服藥的時間及用量絕對要遵照醫師囑咐，如果自行隨意停藥或不按時服用，很可能會造成殘存的細菌出現抗藥性，非但原本的症狀無法痊癒，還可能帶來慢性泌尿道發炎、尿路結石、腎臟功能受損等併發症，千萬要特別注意。
+
+    </pre>
   </div>
+
 </div>
+
+
+  
 <script type="text/javascript">
-var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+$(".tag").on("click",function(){
+  let id=$(this).attr('id').replace('t','c');
+  $(".tag").removeClass('active');
+  $(this).addClass('active')
+  $(".content").removeClass('cactive');
+  $("#"+id).addClass("cactive")
+})
+
 </script>

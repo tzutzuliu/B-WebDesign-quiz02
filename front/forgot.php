@@ -5,7 +5,6 @@
     <div id="result"></div>
     <div><button onclick="findPw()">尋找</button></div>
 </fieldset>
-
 <script>
     function findPw(){
         $.get("./api/find_pw.php",{email:$("#email").val()},(result)=>{
